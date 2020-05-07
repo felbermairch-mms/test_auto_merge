@@ -21,7 +21,7 @@ jobs:
         echo git pull github ${GITHUB_REF} --ff-only
         git pull github ${GITHUB_REF} --ff-only
         echo git merge origin/master
-        git merge origin/master
+        git merge origin/master --no-ff
         echo git push github HEAD:${GITHUB_REF}
         git push github HEAD:${GITHUB_REF}
  
