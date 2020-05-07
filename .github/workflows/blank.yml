@@ -17,6 +17,7 @@ jobs:
      - run: |
         echo git remote add github "https://$GITHUB_ACTOR:$GITHUB_TOKEN@github.com/$GITHUB_REPOSITORY.git"
         git remote add github "https://$GITHUB_ACTOR:$GITHUB_TOKEN@github.com/$GITHUB_REPOSITORY.git"
+        git checkout test
         echo git pull github ${GITHUB_REF} --ff-only
         git pull github ${GITHUB_REF} --ff-only
         echo git merge origin/master
