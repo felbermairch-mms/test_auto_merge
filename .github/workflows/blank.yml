@@ -24,6 +24,6 @@ jobs:
         git pull
         echo git merge origin/master
         git merge origin/master --no-ff
-        echo git push github HEAD:${GITHUB_REF}
-        git push github HEAD:${GITHUB_REF}
+        echo git push github HEAD:test
+        git push github HEAD:test
  
