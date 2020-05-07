@@ -15,6 +15,9 @@ jobs:
     steps:
      - uses: actions/checkout@v1
      - run: |
+        echo "Configuring git"
+        git config --global user.email "felbermairch@mediamarktsaturn.com"
+        git config --global user.name "Christian Felbermair"
         echo "Checking out test"
         git checkout test
         echo "Merging master into test"
