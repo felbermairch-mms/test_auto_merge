@@ -17,7 +17,7 @@ jobs:
      - run: |
         echo "-- Configuring git"
         git config --global user.email "felbermairch@mediamarktsaturn.com"
-        git config --global user.name "Christian Felbermair"
+        git config --global user.name "felbermairch-mms"
         echo "-- Checking out test"
         git checkout test
         echo "-- Merging master into test"
