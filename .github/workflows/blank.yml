@@ -1,0 +1,27 @@
+# This is a basic workflow to help you get started with Actions
+
+name: CI
+
+# Controls when the action will run. Triggers the workflow on push or pull request,
+# events but only for the master branch
+on:
+  push:
+    branches: [ master ]
+
+# A workflow run is made up of one or more jobs that can run sequentially or in parallel
+jobs:
+  runMultipleCommands:
+    runs-on: ubuntu-latest
+    steps:
+     - uses: actions/checkout@v1
+     - run: |
+        echo "-- Configuring git"
+        git config --global user.email "felbermairch@mediamarktsaturn.com"
+        git config --global user.name "felbermairch-mms"
+        echo "-- Checking out test"
+        git checkout test
+        echo "-- Merging master into test"
+        git merge origin/master
+        echo "-- Pushing test"
+        git push
+     - run: echo "One last message"
