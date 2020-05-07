@@ -19,3 +19,6 @@ jobs:
     steps:
     - name: Automatic Merge
       uses: lots0logs/gh-action-auto-merge@1.0.0
+      with:
+        HEAD_BRANCH: test
+        BRANCH_TO_MERGE: master  
