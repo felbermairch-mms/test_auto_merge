@@ -15,13 +15,13 @@ jobs:
     steps:
      - uses: actions/checkout@v1
      - run: |
-        echo "Configuring git"
+        echo "-- Configuring git"
         git config --global user.email "felbermairch@mediamarktsaturn.com"
         git config --global user.name "Christian Felbermair"
-        echo "Checking out test"
+        echo "-- Checking out test"
         git checkout test
-        echo "Merging master into test"
+        echo "-- Merging master into test"
         git merge origin/master
-        echo "Pushing test"
-        git push origin
+        echo "-- Pushing test"
+        git push
      - run: echo "One last message"
