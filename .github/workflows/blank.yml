@@ -11,13 +11,13 @@ on:
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
   # This workflow contains a single job called "build"
-  build:
+  auto_merge:
     # The type of runner that the job will run on
     runs-on: ubuntu-latest
 
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
-    - name: Automatic Merge
+    - name: auto_merge
       uses: lots0logs/gh-action-auto-merge@1.0.0
       with:
         HEAD_BRANCH: test
