@@ -15,13 +15,8 @@ jobs:
     steps:
      - uses: actions/checkout@v1
      - run: |
-        echo "-- Configuring git"
-        git config --global user.email "felbermairch@mediamarktsaturn.com"
-        git config --global user.name "felbermairch-mms"
-        echo "-- Checking out test"
-        git checkout test
-        echo "-- Merging master into test"
+        git remote add github "https://$GITHUB_ACTOR:$GITHUB_TOKEN@github.com/$GITHUB_REPOSITORY.git"
+        git pull github ${GITHUB_REF} --ff-only
         git merge origin/master
-        echo "-- Pushing test"
-        git push
-     - run: echo "One last message"
+        git push github HEAD:${GITHUB_REF}
+ 
