@@ -15,7 +15,9 @@ jobs:
     steps:
      - uses: actions/checkout@v1
      - run: |
-        echo "A initial message"
-        git fetch origin
-        echo "Another message or command"
+        echo "Checking out test"
+        git checkout test
+        echo "Merging master into test"
+        git merge origin/master
+        echo "Pushing test"
      - run: echo "One last message"
