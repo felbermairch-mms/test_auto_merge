@@ -20,4 +20,5 @@ jobs:
         echo "Merging master into test"
         git merge origin/master
         echo "Pushing test"
+        git push origin
      - run: echo "One last message"
